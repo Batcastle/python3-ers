@@ -1,0 +1,3 @@
+[submodule "playing-cards-assets"]
+	path = playing-cards-assets
+	url = https://github.com/hayeah/playing-cards-assets

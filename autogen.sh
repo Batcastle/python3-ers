@@ -1,7 +1,7 @@
 #!/bin/bash
 # -*- coding: utf-8 -*-
 #
-#  buuld-deps.sh
+#  autogen.sh
 #  
 #  Copyright 2020 Thomas Castleman <contact@draugeros.org>
 #  
@@ -21,6 +21,10 @@
 #  MA 02110-1301, USA.
 #  
 #
-git clone https://github.com/hayeah/playing-cards-assets
-# cd playing-cards-assets
-# make -j$(nproc) png
+if [ "$1" == "" ]; then
+	git submodule init
+	git submodule update
+	echo -e "Run \`./autogen.sh update' to update submodules and other dependencies"
+elif [ "$1" == "update" ]; then
+	git submodule update --remote playing-cards-assets
+fi

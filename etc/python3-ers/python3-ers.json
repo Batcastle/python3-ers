@@ -1,0 +1,12 @@
+{
+	"difficulties": {
+				"tutorial": [2, false],
+				"super_easy": [0.5, false],
+				"easy": [0.25, false],
+				"medium": [0.05, false],
+				"hard": [0, true],
+				"extra hard": [-0.1, true],
+				"grand master": [-0.15, true],
+				"impossible": [-0.25, true]
+			}
+}

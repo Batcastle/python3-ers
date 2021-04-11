@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=ERS
+Version=1.0
+Exec=/usr/bin/ers
+Icon=gnome-aisleriot
+Type=Application
+Categories=GNOME;GTK;Game;CardGame;
+Terminal=false
+StartupNotify=true
+Encoding=UTF-8
+Categories=System;
+Comment=Play ERS against your computer
+Name[en_US]=ERS.desktop

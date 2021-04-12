@@ -37,14 +37,26 @@ class ERS():
         self.deck.shuffle()
         self._slap_offset = difficulty_settings[0]
         self._auto_shuffle = difficulty_settings[1]
-        
+
     def deal_cards(self):
         """Seperate cards evenly between player"""
         for each in range(52):
             if each % 2:
+                card = self.deck.peek(0)
                 self.computer.append(self.deck.pop())
             else:
+                card = self.deck.peek(0)
                 self.player1.append(self.deck.pop())
-                
-                
-    
+
+    def award_cards(self, player):
+        """Award cards to player
+
+        Player should be a bool, True to Player, False to Computer
+        """
+        self.deck.reverse()
+        if player:
+            for each in range(self.deck.get_size()):
+                self.player1.append(self.deck.pop())
+        else:
+            for each in range(self.deck.get_size()):
+                self.computer.append(self.deck.pop())

@@ -28,16 +28,15 @@ import deck
 
 class Player(deck.Deck):
     """Player"""
-    def new(self):
+    def new():
         """player setup"""
-        self.__init__(auto_populate=False, visible=False)
-        
+        return Player(auto_populate=False, visible=False)
+
     def bulk_add_cards(self, cards):
         """add cards in bulk"""
         for each in cards:
             self._deck.append(each)
-            
+
     def play_card(self):
         """Play a card"""
         return self._deck.pop()
-        

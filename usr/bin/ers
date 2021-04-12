@@ -25,6 +25,7 @@
 from __future__ import print_function
 import sys
 import time
+import os
 from sys import argv as ARGV
 sys.path("/usr/share/python3-ers")
 import game
@@ -59,6 +60,7 @@ if ARGC > 1:
         __eprint__("Not a valid flag: %s" % (ARGV[1]))
         sys.exit(1)
 else:
+    os.chdir("/usr/share/python3-ers")
     ers = game.ERS()
     ers.deal_cards()
     show_window(ers)
